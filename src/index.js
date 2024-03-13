@@ -5,6 +5,9 @@ function search(event) {
   cityElement.innerHTML = searchInputElement.value;
 }
 
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
@@ -32,10 +35,15 @@ function formatDate(date) {
   return `${formattedDay} ${hours}:${minutes}`;
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
 let currentDateELement = document.querySelector("#current-date");
 let currentDate = new Date();
 
 currentDateELement.innerHTML = formatDate(currentDate);
+
+function signUp(event) {
+  event.preventDefault();
+  let input = document.querySelector("#email");
+  console.log(input.value);
+}
+let form = document.querySelector("form");
+form.addEventListener("submit", signUp);
