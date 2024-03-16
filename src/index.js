@@ -62,7 +62,12 @@ function displayForecast() {
       `
   <div class="weather-forecast-day">
     <div class="weather-forecast-date">${day}</div>
-    <div class="weather-forecast-icon">☀</div>
+    <div id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+                class="weather-app-icon"
+              />
+            </div>
     <div class="weather-forecast-temperatures">
       <div class="weather-forecast-temperature">
         <strong>18º</strong>
